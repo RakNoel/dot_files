@@ -80,14 +80,26 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+
+# ALIASES:
+###########################################
+
+# Config
 alias zshconfig="sudo nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias clear="clear && screenfetch"
-alias printerStart="sudo systemctl start org.cups.cupsd.service"
-alias netStart="sudo NetworkManager"
-alias reset="reset && screenfetch"
-alias spotify="spotify --force-device-scale-factor=2"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
+
+# Terminal
+alias clear="clear && screenfetch"
+alias reset="reset && screenfetch"
+
+# Applications
+alias spotify="spotify --force-device-scale-factor=2"
+alias volume="alsamixer"
+alias nixnote="env 'LD_PRELOAD=libcurl.so.3' nixnote2"
+
+# Displays
+alias vgaON="xrandr --output eDP1 --mode 1400x1050 --output DP1 --auto"
+alias vgaOFF="xrandr --output eDP1 --auto --output DP1 --off"
 
 reset
