@@ -101,5 +101,6 @@ alias nixnote="env 'LD_PRELOAD=libcurl.so.3' nixnote2"
 # Displays
 alias vgaON="xrandr --output eDP1 --mode 1400x1050 --output DP1 --auto"
 alias vgaOFF="xrandr --output eDP1 --auto --output DP1 --off"
+alias display="arandr"
 
 reset
