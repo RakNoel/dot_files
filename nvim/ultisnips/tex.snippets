@@ -36,3 +36,18 @@ snippet begin "begin{...}" b
 $0
 \\end{$1}
 endsnippet
+
+snippet minipage "begin{minipage}" b
+\\begin{minipage}{0.5\textwidth}
+	$1
+\\end{minipage}%
+\\hfill
+\\begin{minipage}{0.5\textwidth}
+\begin{tabular}{|p{\textwidth}}	
+\\
+\\begin{tikzpictu
+	$2
+\\end{tabular}
+\\end{minipage}%
+endsnippet
+

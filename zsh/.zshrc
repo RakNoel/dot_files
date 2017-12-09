@@ -84,6 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES:
 ###########################################
 
+PATH=$PATH:~/.cabal/bin
+
 # Config
 alias zshconfig="sudo nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -104,3 +106,5 @@ alias vgaOFF="xrandr --output eDP1 --auto --output DP1 --off"
 alias display="arandr"
 
 reset
+
+eval $(thefuck --alias)
