@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/raknoel/.oh-my-zsh
+  export PATH={$PATH}:~/.cabal/bin:/home/raknoel/.local/bin:/home/raknoel/.gem/ruby/2.5.0/bin:/usr/bin/core_perl
+  #~/.cabal/bin:
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -81,10 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
+# SETTINGS
+##########################################
+setxkbmap -layout no
+
 # ALIASES:
 ###########################################
 
-PATH=$PATH:~/.cabal/bin
 
 # Config
 alias zshconfig="sudo nvim ~/.zshrc"
@@ -94,6 +99,7 @@ alias nvimconfig="nvim ~/.config/nvim/init.vim"
 # Terminal
 alias clear="clear && screenfetch"
 alias reset="reset && screenfetch"
+alias orphanclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # Applications
 alias spotify="spotify --force-device-scale-factor=2"
@@ -104,6 +110,8 @@ alias nixnote="env 'LD_PRELOAD=libcurl.so.3' nixnote2"
 alias vgaON="xrandr --output eDP1 --mode 1400x1050 --output DP1 --auto"
 alias vgaOFF="xrandr --output eDP1 --auto --output DP1 --off"
 alias display="arandr"
+alias hdmiON="xrandr --output eDP1 --mode 3200x1800 --output DP1 --auto --right-of eDP1"
+alias hdmiOFF="xrandr --output eDP1 --auto --output DP1 --off"
 
 reset
 
